@@ -67,6 +67,7 @@ top_align = ""
 bottom_align = ""
 
 while (i != 0 or j != 0):
+    curr_score = score[i][j]
     direction = path[i][j]
     if (direction == "mch"):
         top_align += top_string[i]
@@ -81,6 +82,9 @@ while (i != 0 or j != 0):
         top_align += "-"
         bottom_align += bottom_string[j]
         j -= 1
+
+    if (curr_score == 0):
+        break
 
 top_align = top_align[::-1]
 bottom_align = bottom_align[::-1]
