@@ -42,7 +42,7 @@ for i in range(1, len(top_string)):
         insert = score[i - 1][j] + indel
         delete = score[i][j - 1] + indel
 
-        score[i][j] = max(match, insert, delete)
+        score[i][j] = max(0, match, insert, delete)
 
         if (score[i][j] == match):
             path[i][j] = "mch"
