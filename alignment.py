@@ -1,7 +1,7 @@
 
 pam = open("PAM250.txt")
-reader = open("input.txt", "r")
-writer = open("output.txt", "w")
+reader = open("input", "r")
+writer = open("output", "w")
 
 
 twod = []
@@ -66,7 +66,7 @@ j = start_j
 top_align = ""
 bottom_align = ""
 
-while i != 0 or j != 0:
+while (i != 0 or j != 0):
     direction = path[i][j]
     if (direction == "mch"):
         top_align += top_string[i]
